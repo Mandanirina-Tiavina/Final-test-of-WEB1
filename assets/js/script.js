@@ -13,6 +13,7 @@ const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
 const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
+const restart = document.getElementById("undo-icon");
 
 const words = {
     easy: ["apple", "banana", "grape", "orange", "cherry"],
@@ -101,6 +102,17 @@ inputField.addEventListener("keydown", (event) => {
     updateWord(event);
 });
 modeSelect.addEventListener("change", () => startTest());
+
+//update the content
+restart.addEventListener("click", () => {
+    startTest();
+});
+document.addEventListener('keydown', (event) => {
+    if (event.ctrlKey && event.key === 'a') {
+        event.preventDefault();
+        startTest();
+    }
+});
 
 // Start the test
 startTest();
