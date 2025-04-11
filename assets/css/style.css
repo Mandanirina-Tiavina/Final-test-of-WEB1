@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.light {
+    --primary: #FFFFFF;
+    --secondary: #1E1E1E;
+    --tertiary: #EEEEEE;
+}
+.dark {
+    --primary: #1E1E1E;
+    --secondary: #FFFFFF;
+    --tertiary: #000000;
+}
+.brown {
+    --primary: #2A1E16;
+    --secondary: #F0E6D2;
+    --tertiary: #4E3829;
+}
+.green{
+    --primary: #14281D;
+    --secondary: #FFFCDC;
+    --tertiary: #2E3D32;
+}
+body {
+    background-color: var(--primary);
+    color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+#logo {
+    object-fit: cover;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    margin: 2vh;
+    gap: 2vh;
+}
+.navbar--left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+}
+.navbar--right {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+#navbar {
+    background-color: var(--tertiary);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1.5vh;
+    gap: 10vw;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: 15vw;
+    gap: 2vh;
+}#word-display {
+    text-align: center;
+    font-size: xx-large;
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 1vh;
+}
+#input-field {
+    padding-inline: 2vw;
+    border: transparent;
+    height: 5vh;
+    font-size: x-large;
+    outline: none;
+    background-color: var(--secondary);
+    color: var(--primary);
+    text-align: center;
+    border-radius: 10px;
+}
+#undo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+#undo-icon {
+    background-color: var(--tertiary);
+    padding: 7px;
+    border-radius: 5px;
+    border: transparent;
+    font-size: 20px;
+    color: var(--secondary);
+}
+#mode, #theme {
+    border:transparent;
+    background-color: var(--tertiary);
+    outline: none;
+    color: var(--secondary);
+}
+footer {
+    display: flex;
+    justify-content: center;
+    margin-block: 5vh;
+}
+.footer-indication {
+    background-color: var(--tertiary);
+    padding: 5px;
+    border-radius: 5px;
+}

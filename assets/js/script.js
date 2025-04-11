@@ -14,6 +14,7 @@ const wordDisplay = document.getElementById("word-display");
 const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
 const restart = document.getElementById("undo-icon");
+const themeSelect = document.getElementById("theme")
 
 const words = {
     easy: ["apple", "banana", "grape", "orange", "cherry"],
@@ -89,7 +90,7 @@ const highlightNextWord = () => {
 
     if (currentWordIndex < wordElements.length) {
         if (currentWordIndex > 0) {
-            wordElements[currentWordIndex - 1].style.color = "black";
+            wordElements[currentWordIndex - 1].style.color = "grey";
         }
         wordElements[currentWordIndex].style.color = "red";
     }
@@ -113,6 +114,10 @@ document.addEventListener('keydown', (event) => {
         startTest();
     }
 });
+
+//change the theme
+themeSelect.onchange = (event) => localStorage.selectItem('theme', document.body.className = event.target.value);
+document.body.className = localStorage.getItem('theme') || 'light';
 
 // Start the test
 startTest();
