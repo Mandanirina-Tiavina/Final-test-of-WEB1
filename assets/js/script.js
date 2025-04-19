@@ -276,3 +276,7 @@ applyTheme(localStorage.getItem('theme') || 'light');
 
 // Start the test
 startTest();
+
+document.getElementById("sign-out-btn").addEventListener("click", ()=> {
+    window.location.href = "login.html"
+})

@@ -145,3 +145,10 @@ footer {
 #historyChart {
     height: 200;
 }
+#sign-out-btn {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+}
