@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .light {
     --primary: #FFFFFF;
@@ -14,8 +15,8 @@
     --tertiary: #000000;
 }
 .brown {
-    --primary: #2A1E16;
-    --secondary: #F0E6D2;
+    --primary: #3B2415;
+    --secondary: #D5C2A5;
     --tertiary: #4E3829;
 }
 .green{
@@ -102,7 +103,7 @@ main {
     font-size: 20px;
     color: var(--secondary);
 }
-#mode, #theme {
+#mode, #theme, #language {
     border:transparent;
     background-color: var(--tertiary);
     outline: none;
@@ -117,4 +118,30 @@ footer {
     background-color: var(--tertiary);
     padding: 5px;
     border-radius: 5px;
+}
+#chart-container {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: var(--tertiary);
+    border-radius: 10px;
+}
+#chart-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#test-stat {
+    flex: 1;
+    min-width: 300px;
+}
+#historic-stat {
+    flex: 2;
+    min-width: 400px;
+}
+#statsChart {
+    height: 200;
+}
+#historyChart {
+    height: 200;
 }

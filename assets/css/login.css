@@ -75,7 +75,7 @@ button:hover {
 body.login-page {
     background: 
         linear-gradient(rgba(102, 126, 234, 0.7), rgba(118, 75, 162, 0.7)),
-        url('../photo/login-bg.jpg') no-repeat center center fixed;
+        url('../assets/photo/fond.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;

@@ -12,6 +12,7 @@
         integrity="sha512-1JkMy1LR9bTo3psH+H4SV5bO2dFylgOy+UJhMus1zF4VEFuZVu5lsi4I6iIndE4N9p01z1554ZDcvMSjMaqCBQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" defer>
         </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <title>Type Ninja</title>
 </head>
 
@@ -34,10 +35,17 @@
                 <div class="theme-select">
                     <label for="theme">Theme: </label>
                     <select id="theme">
-                        <option value="light">Claire</option>
-                        <option value="dark">Sombre</option>
-                        <option value="brown">Marrom</option>
-                        <option value="green">Vert</option>
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                        <option value="brown">Brown</option>
+                        <option value="green">Green</option>
+                    </select>
+                </div>
+                <div class="language-select">
+                    <label for="language">Language: </label>
+                    <select id="language">
+                        <option value="fr">Frensh</option>
+                        <option value="en">English</option>
                     </select>
                 </div>
             </div>
@@ -53,6 +61,18 @@
                 <i class="fa-solid fa-rotate-left"></i>
             </button>
             <p>Restart</p>
+        </div>
+        <div id="chart-container">
+            <div id="chart-content">
+                <div id="test-stat">
+                    <h3>Last Test</h3>
+                    <canvas id="statsChart"></canvas>
+                </div>
+                <div id="historic-stat">
+                    <h3>History</h3>
+                    <canvas id="historyChart"></canvas>
+                </div>
+            </div>
         </div>
     </main>
 
