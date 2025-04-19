@@ -84,11 +84,10 @@ const updateCurrentWord = (typed, targetWord) => {
     const wordElement = wordDisplay.children[currentWordIndex];
     if (!wordElement) return;
 
-    // Réinitialiser l'état pour le mot courant
     currentWordState = Array(targetWord.length).fill(false);
     let coloredWord = "";
 
-    // Comparaison caractère par caractère
+    // check the char similarity
     for (let i = 0; i < targetWord.length; i++) {
         if (i < typed.length) {
             currentWordState[i] = (typed[i] === targetWord[i]);
@@ -151,7 +150,7 @@ const updateHistoryChart = () => {
 
     const ctx = historyChartCanvas.getContext('2d');
     
-    // Triez par timestamp pour être sûr de l'ordre
+    
     const sortedStats = [...gameStats].sort((a, b) => a.timestamp - b.timestamp);
     
     historyChart = new Chart(ctx, {
@@ -205,7 +204,7 @@ const handleSpace = (e) => {
         
         updateCurrentWord(typedWord, currentWord);
         
-        // Calcul EXACT pour ce mot seulement
+        // Calculate one word
         const charsToCheck = Math.min(typedWord.length, currentWord.length);
         let correctThisWord = 0;
         
@@ -213,9 +212,9 @@ const handleSpace = (e) => {
             if (typedWord[i] === currentWord[i]) correctThisWord++;
         }
         
-        // Mise à jour des totaux
+        // update
         correctChars += correctThisWord;
-        totalTypedChars += currentWord.length; // On considère le mot complet
+        totalTypedChars += currentWord.length;
         
         wordDisplay.children[currentWordIndex].classList.remove("current-word");
         currentWordIndex++;
@@ -277,6 +276,7 @@ applyTheme(localStorage.getItem('theme') || 'light');
 // Start the test
 startTest();
 
+// Activatethe sign out button
 document.getElementById("sign-out-btn").addEventListener("click", ()=> {
     window.location.href = "login.html"
 })
