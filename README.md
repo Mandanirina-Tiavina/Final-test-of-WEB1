@@ -10,3 +10,6 @@ Since this is an HTML project, you can use your favorite CSS framework of choice
 - Added bonus if you know how to use Git well.
 
 And most important of all, have fun 🔥
+
+This project is made by Manda with the STD24083 anda Ange with STD14110
+Hope you'll have fun with the game but sorry for the lake of mode
