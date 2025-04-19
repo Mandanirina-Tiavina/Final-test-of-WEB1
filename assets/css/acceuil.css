@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image:url(../photo/8088488.jpg);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .title {
+    font-size: 4rem;
+    color: #00ffff;
+    text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+    animation: glow 1.5s ease-in-out infinite alternate;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #00ffff;
+    color: #0d0d0d;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff inset;
+    transition: transform 0.2s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+    }
+    to {
+      text-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
