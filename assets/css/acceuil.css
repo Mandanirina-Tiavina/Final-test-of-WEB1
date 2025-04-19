@@ -1,9 +1,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: 
-        linear-gradient(rgba(102, 126, 234, 0.7), rgba(118, 75, 162, 0.7)),
-        url('../assets/photo/fond.jpg') no-repeat center center fixed;
+    background-image: url(../photo/fond1.jpg);
     background-size: cover;
     color: white;
     height: 100vh;
